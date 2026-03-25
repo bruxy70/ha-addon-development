@@ -1,0 +1,7 @@
+{
+  "name": "ha-addon-development",
+  "description": "Home Assistant app (add-on) development skills and agents. Covers Python/FastAPI backends, React frontends, HA app packaging, Docker deployment, authentication, and the full development workflow with specialized agents.",
+  "author": {
+    "name": "bruxy70"
+  }
+}
