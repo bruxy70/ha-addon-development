@@ -17,14 +17,24 @@ You are a Test Engineering Specialist focused on creating robust tests for Home 
 ### Backend Testing (Python/pytest)
 - **Unit tests** (`@pytest.mark.unit`): Functions and classes in isolation
 - **Integration tests** (`@pytest.mark.integration`): API endpoints with test database
-- **Security tests** (`@pytest.mark.security`): Authentication and authorization
-- Target 80% overall, 90%+ for core business logic, 100% for security
+- **Security tests** (`@pytest.mark.security`): Authentication and authorization — aim for 100% coverage of auth and authz paths
 
 ### Frontend Testing (Jest/React Testing Library)
 - **Component tests**: Render, interact, assert on DOM
 - **Integration tests**: Component interaction with mocked API
 - Handle React Query with test `QueryClientProvider`
 - Handle debounced inputs with `jest.useFakeTimers()`
+
+### Coverage philosophy
+
+Coverage is a measurement, not a goal. Don't chase a blanket percentage. Focus on:
+
+- **Critical paths** — flows users actually take, especially data-modifying ones.
+- **Security-sensitive code** — auth, authz, input validation, secret handling. 100% coverage here.
+- **Edge cases the design called out** — network failure, partial writes, empty inputs, auth expiry.
+- **Behaviors that broke once** — regression tests for real bugs that were fixed.
+
+Skip or defer tests for trivial getters, framework boilerplate, and code likely to be thrown away. Early implementation often gets rewritten — don't over-invest in tests before the design is stable.
 
 ## Backend Test Patterns
 

@@ -4,6 +4,7 @@ A Claude Code plugin for developing Home Assistant apps (formerly add-ons) — f
 
 ## Skills
 
+- **software-design-process** — 7-step design framework (define, UX, technical, testing, plan, ripple effects, broader context) plus coding tenets (functions over classes, separate creation from use, type system over strings). Composable across architect, planner, and coder agents.
 - **ha-app-packaging** — HA app structure, config.yaml schema, Dockerfile patterns, ingress, Supervisor API, data persistence, options schema, translations, publishing to HACS.
 - **python-backend** — Python/FastAPI patterns for HA apps. SQLite with SQLAlchemy, JWT authentication, API key management, Pydantic validation, ingress base path handling, migrations with Alembic, graceful shutdown.
 - **react-frontend** — React frontend patterns for HA apps. Ingress base path handling, React Query for server state, dark/light theming, responsive design, error boundaries, build configuration with Vite.
